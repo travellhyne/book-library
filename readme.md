@@ -1,6 +1,8 @@
 ### Rio's Book Library
 
 # Configuration
+Rename `.env.example` to `.env`.
+
 This app uses sqlite as its database. Set `DB_DATABASE` to the **absolute** path of the sqlite database inside the `database` folder.
 
 # Initialize
