@@ -78,6 +78,15 @@ class BookController extends Controller {
         ->get();
       return $books;
     }
-    return [];
+    return response()->json([]);
+  }
+
+  public function deleteBook($id) {
+    $book = Book::find($id);
+    $book->delete();
+
+    return response()->json([
+      'message' => 'Book deleted.'
+    ]);
   }
 }

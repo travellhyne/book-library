@@ -24,3 +24,5 @@ Route::put('/api/books/{id}', 'BookController@updateBook');
 Route::get('/api/books/{id}', 'BookController@getBook');
 
 Route::get('/api/search', 'BookController@searchBook');
+
+Route::delete('/api/delete/{id}', 'BookController@deleteBook');
