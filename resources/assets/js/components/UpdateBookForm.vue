@@ -30,6 +30,7 @@
         </label>
       </div>
       <button class="btn btn-primary" v-on:click="updateBook">Update book</button>
+      <h4><router-link to="/">Go back</router-link></h4>
     </div>
     <div class="container" v-else>
       <h1>No such book. <router-link to="/">Go back</router-link></h1>

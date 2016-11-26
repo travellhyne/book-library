@@ -29,6 +29,9 @@
       </label>
     </div>
     <button class="btn btn-primary" v-on:click="addBook">Add new book</button>
+    <router-link to="/">
+      <h4>Go back</h4>
+    </router-link>
   </div>
 </template>
 
