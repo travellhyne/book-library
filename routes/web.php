@@ -12,5 +12,15 @@
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('home');
 });
+
+Route::get('/api/books', 'BookController@retrieveAll');
+
+Route::post('/api/books', 'BookController@saveBook');
+
+Route::put('/api/books/{id}', 'BookController@updateBook');
+
+Route::get('/api/books/{id}', 'BookController@getBook');
+
+Route::get('/api/search', 'BookController@searchBook');
