@@ -12,13 +12,17 @@
 */
 
 /** @var \Illuminate\Database\Eloquent\Factory $factory */
-$factory->define(App\User::class, function (Faker\Generator $faker) {
-    static $password;
+$factory->define(App\Book::class, function (Faker\Generator $faker) {
+
+    $sections = array("Circulation", "Periodical Section", "General Reference", "Children's Section", "Fiction");
 
     return [
-        'name' => $faker->name,
-        'email' => $faker->unique()->safeEmail,
-        'password' => $password ?: $password = bcrypt('secret'),
-        'remember_token' => str_random(10),
+        'title' => str_random(25),
+        'author' => str_random(20),
+        'genre' => str_random(15),
+        'section' => $sections[array_rand($sections)],
+        'borrowed' => false
     ];
 });
+
+
